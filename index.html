@@ -263,12 +263,12 @@
                         		divv.appendChild(duration);
                         		document.getElementById("d").appendChild(divv);
                         		divv.setAttribute("position","relative");
-                            divv.setAttribute("height","500px");
+                                divv.setAttribute("height","500px");
                         		divv.setAttribute("width","400px");
                         		img.setAttribute("src",data.data[i].album.cover_medium);
                         		img.setAttribute("float","left");
-                            img.setAttribute("height","400px");
-                            img.setAttribute("width","400px");
+                                img.setAttribute("height","400px");
+                                img.setAttribute("width","400px");
                         		title.innerHTML="Title = "+data.data[i].title
                         		duration.innerHTML="Time Duration = "+data.data[i].duration+"s"
                         		artist.innerHTML="Artist Name = "+data.data[i].artist.name
@@ -277,7 +277,7 @@
                     };
                     xhttp.open("GET", "https://deezerdevs-deezer.p.rapidapi.com/search?q="+song)
                     xhttp.setRequestHeader("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com")
-                  xhttp.setRequestHeader("x-rapidapi-key", "a03189d857msh65a222bb2c25613p163acdjsnf9fcfeb8b74c")
+                    xhttp.setRequestHeader("x-rapidapi-key", "a03189d857msh65a222bb2c25613p163acdjsnf9fcfeb8b74c")
                     xhttp.send();
                   }
                   function getbyartist()
@@ -317,12 +317,12 @@
                   				document.getElementById("d1").appendChild(divv);
                   				divv.setAttribute("position","relative");
                   				divv.setAttribute("width","200px");
-                          divv.setAttribute("height","400px");
-                          divv.setAttribute("font-size","35px")
+                                divv.setAttribute("height","400px");
+                                divv.setAttribute("font-size","35px")
                   				img.setAttribute("src",ans.response.songs[i].header_image_url);
                   				img.setAttribute("float","left");
-                          img.setAttribute("height","400px");
-                          img.setAttribute("width","400px");
+                                img.setAttribute("height","400px");
+                                img.setAttribute("width","400px");
                   				title.innerHTML="TITLE="+ans.response.songs[i].title;
                   			}
                   		}
@@ -334,14 +334,19 @@
                   }
                   var myIndex = 0;
                   carousel();
-                  function carousel() {
+                  function carousel() 
+                  {
                     var i;
                     var x = document.getElementsByClassName("mySlides");
-                    for (i = 0; i < x.length; i++) {
+                    for (i = 0; i < x.length; i++)
+                    {
                       x[i].style.display = "none";
                     }
                     myIndex++;
-                    if (myIndex > x.length) {myIndex = 1}
+                    if (myIndex > x.length) 
+                    {
+                        myIndex = 1
+                    }
                     x[myIndex-1].style.display = "block";
                     setTimeout(carousel, 2500);
                   }
