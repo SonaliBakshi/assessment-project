@@ -62,6 +62,10 @@ body
     flex: 25%;
     padding: 0px;
 }
+.row2 .column2 img:hover {
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 .text-block2 {
     position:absolute;
     bottom:300px;
@@ -132,11 +136,6 @@ margin: 8px 0;
 box-sizing: border-box;
 border: 2px solid red;
 border-radius: 4px;
-}
-//to flip the image
-.row2 .column2:hover {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
 }
 .fa {
   padding: 5px;
